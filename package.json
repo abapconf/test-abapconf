@@ -1,0 +1,17 @@
+{
+  "name": "test-abapconf",
+  "version": "0.0.1",
+  "description": "Run UI tests for site abapconf.org",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test"
+  },
+  "keywords": ["abapconf", "ui tests", "playwright"],
+  "author": "Tobias Hofmann",
+  "license": "Apache-2.0",
+  "type": "module",
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^25.9.1"
+  }
+}
