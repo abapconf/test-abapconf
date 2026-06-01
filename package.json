@@ -1,6 +1,6 @@
 {
-  "name": "test-abapconf",
-  "version": "0.0.1",
+  "name": "test-abapconf.github.io",
+  "version": "1.0.0",
   "description": "Run UI tests for site abapconf.org",
   "main": "index.js",
   "scripts": {

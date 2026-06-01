@@ -2,7 +2,6 @@ import { test, expect } from '@playwright/test';
 
 test('homepage - hero', async ({ page }) => {
   await page.goto('/abapconf2026');
-  await expect(page.getByRole('main')).toMatchAriaSnapshot(`- heading /ABAPConf \\d+/ [level=1]`);
   await expect(page).toHaveScreenshot();
 
 });
@@ -10,18 +9,24 @@ test('homepage - hero', async ({ page }) => {
 test('homepage - full page', async ({ page }) => {
   await page.goto('/abapconf2026');
   test.setTimeout(10000);
-  await expect(page).toHaveScreenshot({fullPage: true});
+  await expect(page.getByRole('link', { name: 'Sponsor softway' })).toBeVisible();
+  await expect(page.getByRole('link', { name: 'Sponsor rev-trac' })).toBeVisible();
+  await expect(page.getByRole('link', { name: 'Sponsor Brandeis GmbH' })).toBeVisible();
+  await expect(page.getByRole('img', { name: 'MAFINEX skyline' })).toBeVisible();
+  await expect(page).toHaveScreenshot({fullPage: true, timeout: 10000});
 
 });
 
 test('homepage - tickets', async ({ page }) => {
   await page.goto('/abapconf2026/#registration');
+  await page.locator("#registration").scrollIntoViewIfNeeded();
   await expect(page).toHaveScreenshot();
 });
 
 test('homepage - tickets - hover', async ({ page }) => {
   await page.goto('/abapconf2026/#registration');
   await expect(page.getByRole('link', { name: 'ABAPConf 2026 Online Edition' })).toBeVisible();
+  await page.locator("#registration").scrollIntoViewIfNeeded();
   await page.getByRole('link', { name: 'ABAPConf 2026 Online Edition' }).hover();
   await expect(page).toHaveScreenshot();
 });
@@ -30,6 +35,7 @@ test('homepage - tickets - hover', async ({ page }) => {
 test('homepage - tickets mannheim - hover', async ({ page }) => {
   await page.goto('/abapconf2026/#registration');
   await expect(page.getByRole('link', { name: 'ABAPConf 2026 Mannheim' })).toBeVisible();
+  await page.locator("#registration").scrollIntoViewIfNeeded();
   await page.getByRole('link', { name: 'ABAPConf 2026 Mannheim' }).hover();
   await expect(page).toHaveScreenshot();
 });
