@@ -31,7 +31,7 @@ test('sponsors - rev-trac', async ({ page }) => {
 });
 
 test('sponsors - softway', async ({ page }) => {
-  await page.goto('/abapconf2026/sponsors/softway');
+  await page.goto('/abapconf2026/sponsors/softway-ag');
   await expect(page).toHaveScreenshot();
 });
 
