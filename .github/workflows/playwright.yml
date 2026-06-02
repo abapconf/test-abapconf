@@ -5,7 +5,7 @@ on:
   pull_request:
     branches: [ main, master ]
 jobs:
-  ui-test:
+  ui-tests:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     permissions:
@@ -39,10 +39,19 @@ jobs:
         name: tests-results
         path: tests-results/
         retention-days: 30
-    - name: Publish pages
-      uses: grafana/plugin-actions/playwright-gh-pages/deploy-report-pages@main      
-      with:
-        artifact-pattern: playwright-report/*
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-        pages-branch: gh-pages
-        pr-comment-summary: false
+  deploy-pages:
+    if: ${{ !cancelled() }}
+    needs: [ui-tests]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Publish pages
+        uses: grafana/plugin-actions/playwright-gh-pages/deploy-report-pages@main      
+        with:
+          artifact-pattern: playwright-report*
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          pages-branch: gh-pages
+          pr-comment-summary: false
