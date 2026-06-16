@@ -1,0 +1,868 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: test-1.spec.ts >> homepage - tickets
+- Location: tests/test-1.spec.ts:20:1
+
+# Error details
+
+```
+Error: expect(page).toHaveScreenshot(expected) failed
+
+  27852 pixels (ratio 0.04 of all image pixels) are different.
+
+Call log:
+  - Expect "toHaveScreenshot" with timeout 5000ms
+    - verifying given screenshot expectation
+  - taking page screenshot
+    - disabled all CSS animations
+  - waiting for fonts to load...
+  - fonts loaded
+  - 27852 pixels (ratio 0.04 of all image pixels) are different.
+  - waiting 100ms before taking screenshot
+  - taking page screenshot
+    - disabled all CSS animations
+  - waiting for fonts to load...
+  - fonts loaded
+  - captured a stable screenshot
+  - 27852 pixels (ratio 0.04 of all image pixels) are different.
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - link "Logo" [ref=e3] [cursor=pointer]:
+      - /url: /abapconf2026
+      - img "Logo" [ref=e4]
+    - list [ref=e5]:
+      - listitem [ref=e6]:
+        - link "Home" [ref=e7] [cursor=pointer]:
+          - /url: /abapconf2026
+      - listitem [ref=e8]:
+        - link "Tickets" [ref=e9] [cursor=pointer]:
+          - /url: /abapconf2026/#registration
+      - listitem [ref=e10]:
+        - link "Agenda" [ref=e11] [cursor=pointer]:
+          - /url: /abapconf2026/agenda
+      - listitem [ref=e12]:
+        - link "Speakers" [ref=e13] [cursor=pointer]:
+          - /url: /abapconf2026/speakers
+      - listitem [ref=e14]:
+        - link "Location" [ref=e15] [cursor=pointer]:
+          - /url: /abapconf2026/locations/mannheim
+      - listitem [ref=e16]:
+        - link "Sponsors" [ref=e17] [cursor=pointer]:
+          - /url: /abapconf2026/sponsors
+      - listitem [ref=e18]:
+        - link "Streaming" [ref=e19] [cursor=pointer]:
+          - /url: /abapconf2026/#streaming
+      - listitem [ref=e20]:
+        - link "FAQ" [ref=e21] [cursor=pointer]:
+          - /url: /abapconf2026/#faq
+  - main [ref=e22]:
+    - generic [ref=e25]:
+      - heading "ABAPConf 2026" [level=1] [ref=e26]
+      - paragraph [ref=e27]: 23. June 2026 – by developers, for developers
+      - paragraph [ref=e28]: 🌍 ONLINE | Hybrid | 📍 Mannheim
+    - generic [ref=e29]:
+      - heading "About the conference" [level=2] [ref=e30]
+      - heading "The conference for the SAP Full Stack Developer" [level=4] [ref=e31]
+      - generic [ref=e32]:
+        - generic [ref=e33]:
+          - heading "General Information" [level=3] [ref=e34]
+          - generic [ref=e35]:
+            - paragraph [ref=e36]: "Welcome to ABAPConf 2026. We celebrate our 5th anniversary and are going back to our roots: an online, live, free conference with content by developers, for developers."
+            - paragraph [ref=e37]: The conference is geared toward SAP full-stack developers with a focus on ABAP. The topics cover the entire application spectrum—from traditional reports to modern Fiori Elements apps, running both on-premises and in the cloud.
+            - paragraph [ref=e38]: ABAPConf 2026 is a one day online conference that offers an onsite experience in Mannheim, Germany.
+        - complementary [ref=e39]:
+          - generic [ref=e40]:
+            - heading "Details" [level=3] [ref=e41]
+            - list [ref=e42]:
+              - listitem [ref=e43]:
+                - generic [ref=e44]: Duration
+                - generic [ref=e45]: 1 day
+              - listitem [ref=e46]:
+                - generic [ref=e47]: Languages
+                - generic [ref=e48]: German / English
+              - listitem [ref=e49]:
+                - generic [ref=e50]: Date
+                - generic [ref=e51]: 23. June 2026
+              - listitem [ref=e52]:
+                - generic [ref=e53]: Format
+                - generic [ref=e54]: hybrid
+      - generic [ref=e55]:
+        - heading "Locations" [level=3] [ref=e57]
+        - article [ref=e59]:
+          - generic [ref=e60]:
+            - img "MAFINEX skyline" [ref=e61]
+            - 'link "Registration: Get your ticket for Mannheim" [ref=e63] [cursor=pointer]':
+              - /url: https://www.eventbrite.com/e/abapconf-2026-mannheim-tickets-1986300441089
+          - generic [ref=e65]:
+            - generic [ref=e66]:
+              - heading "MAFINEX" [level=4] [ref=e67]
+              - paragraph [ref=e68]:
+                - generic [ref=e69]: Mannheim
+                - generic [ref=e70]: "68163"
+              - paragraph [ref=e71]: Free admission. Food, Drinks paid by participant
+            - generic [ref=e72]:
+              - link "🗺 Open Map" [ref=e73] [cursor=pointer]:
+                - /url: https://www.google.com/maps/search/?api=1&query=MAFINEX%20Mannheim%2068163
+              - 'link "➜ Location: Mannheim" [ref=e74] [cursor=pointer]':
+                - /url: /abapconf2026/locations/mannheim
+    - generic [ref=e75]:
+      - heading "Platinum Sponsors" [level=3] [ref=e76]
+      - generic [ref=e78]:
+        - link "Sponsor Conduct" [ref=e79] [cursor=pointer]:
+          - /url: /abapconf2026/sponsors/conduct
+          - img "Conduct" [ref=e80]
+        - link "Sponsor Nova Intelligence" [ref=e81] [cursor=pointer]:
+          - /url: /abapconf2026/sponsors/nova-intelligence
+          - img "Nova Intelligence" [ref=e82]
+    - generic [ref=e83]:
+      - heading "Gold Sponsors" [level=3] [ref=e84]
+      - generic [ref=e86]:
+        - link "Sponsor Brandeis GmbH" [ref=e87] [cursor=pointer]:
+          - /url: /abapconf2026/sponsors/brandeis-gmbh
+          - img "Brandeis GmbH" [ref=e88]
+        - link "Sponsor Cadaxo GmbH" [ref=e89] [cursor=pointer]:
+          - /url: /abapconf2026/sponsors/cadaxo-gmbh
+          - img "Cadaxo GmbH" [ref=e90]
+    - generic [ref=e91]:
+      - heading "Silver Sponsors" [level=3] [ref=e92]
+      - generic [ref=e94]:
+        - link "Sponsor dox42" [ref=e95] [cursor=pointer]:
+          - /url: /abapconf2026/sponsors/dox42
+          - img "dox42" [ref=e96]
+        - link "Sponsor Softway AG" [ref=e97] [cursor=pointer]:
+          - /url: /abapconf2026/sponsors/softway-ag
+          - img "Softway AG" [ref=e98]
+        - link "Sponsor rev-trac" [ref=e99] [cursor=pointer]:
+          - /url: /abapconf2026/sponsors/rev-trac
+          - img "rev-trac" [ref=e100]
+    - separator [ref=e101]
+    - region "Registration" [ref=e102]:
+      - heading "Registration" [level=2] [ref=e103]
+      - link "ABAPConf 2026 Online Edition Registration refers to the Online Edition of ABAPConf 2026. Registration is optional and not required to access the live streams. Ticket" [ref=e105] [cursor=pointer]:
+        - /url: https://www.eventbrite.com/e/abapconf-2026-online-edition-registration-1984112755663
+        - heading "ABAPConf 2026 Online Edition" [level=3] [ref=e106]
+        - paragraph [ref=e107]:
+          - text: Registration refers to the
+          - strong [ref=e108]: Online Edition of ABAPConf 2026
+          - text: . Registration is
+          - strong [ref=e109]: optional
+          - text: and
+          - strong [ref=e110]: not required
+          - text: to access the live streams.
+        - generic [ref=e112]: Ticket
+      - separator [ref=e113]
+      - link "ABAPConf 2026 Mannheim Registration refers to the on-site, in-person edition of ABAPConf 2026 in Mannheim. Ticket" [ref=e115] [cursor=pointer]:
+        - /url: https://www.eventbrite.com/e/abapconf-2026-mannheim-tickets-1986300441089
+        - heading "ABAPConf 2026 Mannheim" [level=3] [ref=e116]
+        - paragraph [ref=e117]:
+          - text: Registration refers to the
+          - strong [ref=e118]: on-site, in-person edition of ABAPConf 2026 in Mannheim
+          - text: .
+        - generic [ref=e120]: Ticket
+      - paragraph [ref=e121]: "Registration is handled via an external service (Eventbrite). Please note: By accessing the Eventbrite page, you agree to their terms and privacy policy."
+    - separator [ref=e122]
+    - generic [ref=e123]:
+      - heading "Live Streaming" [level=2] [ref=e124]
+      - paragraph [ref=e125]: Join us live and online - track 1 and 2 sessions will be streamed on YouTube
+      - img "Livestream Preview" [ref=e127]
+      - generic [ref=e128]:
+        - link "Watch the track 1 live stream ▶ open Video" [ref=e129] [cursor=pointer]:
+          - /url: https://www.youtube.com/live/eI-7ikyQLpg
+          - heading [level=3]
+          - paragraph [ref=e130]: Watch the track 1 live stream
+          - button "▶ open Video" [ref=e131]
+        - link "Watch the track 2 live stream ▶ open Video" [ref=e132] [cursor=pointer]:
+          - /url: https://www.youtube.com/live/sntfpAJa4C4
+          - heading [level=3]
+          - paragraph [ref=e133]: Watch the track 2 live stream
+          - button "▶ open Video" [ref=e134]
+    - generic [ref=e135]:
+      - heading "Agenda" [level=1] [ref=e136]
+      - paragraph [ref=e137]:
+        - text: For the on-site exclusive sessions in track 3, click on Track 3 in the agenda table header, or
+        - link "click here" [ref=e138] [cursor=pointer]:
+          - /url: /abapconf2026/agenda/track3
+      - generic [ref=e139]:
+        - generic [ref=e140]:
+          - button "Agenda drucken (⌘ + P / Ctrl + P)" [ref=e144]: 🖨️
+          - generic [ref=e145]:
+            - generic [ref=e146]: Time
+            - link "Track 1" [ref=e148] [cursor=pointer]:
+              - /url: /abapconf2026/agenda/track1
+            - link "Track 2" [ref=e150] [cursor=pointer]:
+              - /url: /abapconf2026/agenda/track2
+            - link "Track 3" [ref=e152] [cursor=pointer]:
+              - /url: /abapconf2026/agenda/track3
+        - generic [ref=e153]:
+          - generic [ref=e154]:
+            - generic [ref=e155]: 08:00
+            - generic [ref=e157]:
+              - generic [ref=e158]: All Tracks
+              - generic [ref=e160]:
+                - generic [ref=e161]: EN
+                - link "Add to calendar (ICS)" [ref=e162] [cursor=pointer]:
+                  - /url: /abapconf2026/ics/reg.ics
+                  - img [ref=e163]
+              - link "Registration (on-site only)" [ref=e165] [cursor=pointer]:
+                - /url: /abapconf2026/sessions/reg
+                - heading "Registration (on-site only)" [level=3] [ref=e168]
+          - generic [ref=e169]:
+            - generic [ref=e170]: 08:50
+            - generic [ref=e172]:
+              - generic [ref=e173]: All Tracks
+              - generic [ref=e174]:
+                - generic [ref=e176]: Keynote
+                - generic [ref=e177]:
+                  - generic [ref=e178]: EN
+                  - link "Add to calendar (ICS)" [ref=e179] [cursor=pointer]:
+                    - /url: /abapconf2026/ics/welcome.ics
+                    - img [ref=e180]
+              - link "Welcome to ABAPConf 2026" [ref=e182] [cursor=pointer]:
+                - /url: /abapconf2026/sessions/welcome
+                - heading "Welcome to ABAPConf 2026" [level=3] [ref=e185]
+          - generic [ref=e186]:
+            - generic [ref=e187]: 09:00
+            - generic [ref=e189]:
+              - generic [ref=e190]: All Tracks
+              - generic [ref=e191]:
+                - generic [ref=e193]: Keynote
+                - generic [ref=e194]:
+                  - generic [ref=e195]: EN
+                  - link "Add to calendar (ICS)" [ref=e196] [cursor=pointer]:
+                    - /url: /abapconf2026/ics/key.ics
+                    - img [ref=e197]
+              - 'link "ABAPConf: 5 years later" [ref=e199] [cursor=pointer]':
+                - /url: /abapconf2026/sessions/key
+                - 'heading "ABAPConf: 5 years later" [level=3] [ref=e202]'
+              - generic [ref=e203]:
+                - link "Tobias Hofmann Tobias Hofmann Speaker Profil →" [ref=e204] [cursor=pointer]:
+                  - /url: /abapconf2026/speaker/tobias-hofmann
+                  - img "Tobias Hofmann" [ref=e205]
+                  - generic [ref=e206]:
+                    - generic [ref=e207]: Tobias Hofmann
+                    - generic [ref=e208]: Speaker Profil →
+                - link "Sören Schlegel Sören Schlegel Speaker Profil →" [ref=e209] [cursor=pointer]:
+                  - /url: /abapconf2026/speaker/soeren-schlegel
+                  - img "Sören Schlegel" [ref=e210]
+                  - generic [ref=e211]:
+                    - generic [ref=e212]: Sören Schlegel
+                    - generic [ref=e213]: Speaker Profil →
+                - link "Johann Fößleitner Johann Fößleitner Speaker Profil →" [ref=e214] [cursor=pointer]:
+                  - /url: /abapconf2026/speaker/johann-foessleitner
+                  - img "Johann Fößleitner" [ref=e215]
+                  - generic [ref=e216]:
+                    - generic [ref=e217]: Johann Fößleitner
+                    - generic [ref=e218]: Speaker Profil →
+                - link "Domi Bigl Domi Bigl Speaker Profil →" [ref=e219] [cursor=pointer]:
+                  - /url: /abapconf2026/speaker/domi-bigl
+                  - img "Domi Bigl" [ref=e220]
+                  - generic [ref=e221]:
+                    - generic [ref=e222]: Domi Bigl
+                    - generic [ref=e223]: Speaker Profil →
+          - generic [ref=e224]:
+            - generic [ref=e225]: 09:30
+            - generic [ref=e227]:
+              - generic [ref=e228]: All Tracks
+              - generic [ref=e229]:
+                - generic [ref=e231]: Keynote
+                - generic [ref=e232]:
+                  - generic [ref=e233]: EN
+                  - link "Add to calendar (ICS)" [ref=e234] [cursor=pointer]:
+                    - /url: /abapconf2026/ics/key2.ics
+                    - img [ref=e235]
+              - link "Secure and automated ABAP Cloud Full-Stack Development Process - From Concept to Successful Delivery" [ref=e237] [cursor=pointer]:
+                - /url: /abapconf2026/sessions/key2
+                - heading "Secure and automated ABAP Cloud Full-Stack Development Process - From Concept to Successful Delivery" [level=3] [ref=e240]
+              - generic [ref=e241]:
+                - link "Wolfgang Röckelein Dr. Wolfgang Röckelein Speaker Profil →" [ref=e242] [cursor=pointer]:
+                  - /url: /abapconf2026/speaker/wolfgang-roeckelein
+                  - img "Wolfgang Röckelein" [ref=e243]
+                  - generic [ref=e244]:
+                    - generic [ref=e245]: Dr. Wolfgang Röckelein
+                    - generic [ref=e246]: Speaker Profil →
+                - link "Markus Bittner Markus Bittner Speaker Profil →" [ref=e247] [cursor=pointer]:
+                  - /url: /abapconf2026/speaker/markus-bittner
+                  - img "Markus Bittner" [ref=e248]
+                  - generic [ref=e249]:
+                    - generic [ref=e250]: Markus Bittner
+                    - generic [ref=e251]: Speaker Profil →
+          - generic [ref=e252]:
+            - generic [ref=e253]: 10:30
+            - generic [ref=e255]:
+              - generic [ref=e256]: All Tracks
+              - generic [ref=e257]:
+                - generic [ref=e259]: Keynote
+                - generic [ref=e260]:
+                  - generic [ref=e261]: EN
+                  - link "Add to calendar (ICS)" [ref=e262] [cursor=pointer]:
+                    - /url: /abapconf2026/ics/key3.ics
+                    - img [ref=e263]
+              - 'link "Keynote: SAP - ABAP Cloud" [ref=e265] [cursor=pointer]':
+                - /url: /abapconf2026/sessions/key3
+                - 'heading "Keynote: SAP - ABAP Cloud" [level=3] [ref=e268]'
+              - generic [ref=e269]:
+                - link "Jens Weiler Jens Weiler Speaker Profil →" [ref=e270] [cursor=pointer]:
+                  - /url: /abapconf2026/speaker/jens-weiler
+                  - img "Jens Weiler" [ref=e271]
+                  - generic [ref=e272]:
+                    - generic [ref=e273]: Jens Weiler
+                    - generic [ref=e274]: Speaker Profil →
+                - link "Andre Fischer Andre Fischer Speaker Profil →" [ref=e275] [cursor=pointer]:
+                  - /url: /abapconf2026/speaker/andre-fischer
+                  - img "Andre Fischer" [ref=e276]
+                  - generic [ref=e277]:
+                    - generic [ref=e278]: Andre Fischer
+                    - generic [ref=e279]: Speaker Profil →
+          - generic [ref=e280]:
+            - generic [ref=e281]: 11:30
+            - generic [ref=e284]:
+              - generic [ref=e285]: Track 1
+              - generic [ref=e286]:
+                - generic [ref=e288]: Advanced Level
+                - generic [ref=e289]:
+                  - generic [ref=e290]: DE
+                  - link "Add to calendar (ICS)" [ref=e291] [cursor=pointer]:
+                    - /url: /abapconf2026/ics/v1.ics
+                    - img [ref=e292]
+              - 'link "V1: ABAP kann TDD: Anforderungen als Gherkin, Tests mit ABAP Unit, Qualität mit ATC, Auslieferung per Pipeline" [ref=e294] [cursor=pointer]':
+                - /url: /abapconf2026/sessions/v1
+                - 'heading "V1: ABAP kann TDD: Anforderungen als Gherkin, Tests mit ABAP Unit, Qualität mit ATC, Auslieferung per Pipeline" [level=3] [ref=e297]'
+              - generic [ref=e298]:
+                - link "Pascal Kuhnen Pascal Kuhnen Speaker Profil →" [ref=e299] [cursor=pointer]:
+                  - /url: /abapconf2026/speaker/pascal-kuhnen
+                  - img "Pascal Kuhnen" [ref=e300]
+                  - generic [ref=e301]:
+                    - generic [ref=e302]: Pascal Kuhnen
+                    - generic [ref=e303]: Speaker Profil →
+                - link "Stefan Seufert Stefan Seufert Speaker Profil →" [ref=e304] [cursor=pointer]:
+                  - /url: /abapconf2026/speaker/stefan-seufert
+                  - img "Stefan Seufert" [ref=e305]
+                  - generic [ref=e306]:
+                    - generic [ref=e307]: Stefan Seufert
+                    - generic [ref=e308]: Speaker Profil →
+            - generic [ref=e311]:
+              - generic [ref=e312]: Track 2
+              - generic [ref=e313]:
+                - generic [ref=e315]: Starter Level
+                - generic [ref=e316]:
+                  - generic [ref=e317]: EN
+                  - link "Add to calendar (ICS)" [ref=e318] [cursor=pointer]:
+                    - /url: /abapconf2026/ics/v6.ics
+                    - img [ref=e319]
+              - 'link "V6: RAP Application Patterns" [ref=e321] [cursor=pointer]':
+                - /url: /abapconf2026/sessions/v6
+                - 'heading "V6: RAP Application Patterns" [level=3] [ref=e324]'
+              - link "Marcel Hermanns Marcel Hermanns Speaker Profil →" [ref=e326] [cursor=pointer]:
+                - /url: /abapconf2026/speaker/marcel-hermanns
+                - img "Marcel Hermanns" [ref=e327]
+                - generic [ref=e328]:
+                  - generic [ref=e329]: Marcel Hermanns
+                  - generic [ref=e330]: Speaker Profil →
+            - generic [ref=e333]:
+              - generic [ref=e334]: Track 3
+              - generic [ref=e335]:
+                - generic [ref=e337]: Advanced Level
+                - generic [ref=e339]: EN
+              - link "Onsite experience - Nova Intelligence, Meet the experts" [ref=e340] [cursor=pointer]:
+                - /url: /abapconf2026/sessions/v13
+                - heading "Onsite experience - Nova Intelligence, Meet the experts" [level=3] [ref=e343]
+          - generic [ref=e344]:
+            - generic [ref=e345]: 12:15
+            - generic [ref=e347]:
+              - generic [ref=e348]: All Tracks
+              - generic [ref=e350]:
+                - generic [ref=e351]: EN
+                - link "Add to calendar (ICS)" [ref=e352] [cursor=pointer]:
+                  - /url: /abapconf2026/ics/lunch.ics
+                  - img [ref=e353]
+              - link "Lunch" [ref=e355] [cursor=pointer]:
+                - /url: /abapconf2026/sessions/lunch
+                - heading "Lunch" [level=3] [ref=e358]
+          - generic [ref=e359]:
+            - generic [ref=e360]: 13:15
+            - generic [ref=e363]:
+              - generic [ref=e364]: Track 1
+              - generic [ref=e365]:
+                - generic [ref=e367]: Advanced Level
+                - generic [ref=e368]:
+                  - generic [ref=e369]: EN
+                  - link "Add to calendar (ICS)" [ref=e370] [cursor=pointer]:
+                    - /url: /abapconf2026/ics/v2.ics
+                    - img [ref=e371]
+              - 'link "V2: Nice Template! Can We Buy It? — The Reality of Turning a SaaS solution for German Utilities into a Product" [ref=e373] [cursor=pointer]':
+                - /url: /abapconf2026/sessions/v2
+                - 'heading "V2: Nice Template! Can We Buy It? — The Reality of Turning a SaaS solution for German Utilities into a Product" [level=3] [ref=e376]'
+              - link "Christopher Graw Dr. Christopher Graw Speaker Profil →" [ref=e378] [cursor=pointer]:
+                - /url: /abapconf2026/speaker/christopher-graw
+                - img "Christopher Graw" [ref=e379]
+                - generic [ref=e380]:
+                  - generic [ref=e381]: Dr. Christopher Graw
+                  - generic [ref=e382]: Speaker Profil →
+            - generic [ref=e385]:
+              - generic [ref=e386]: Track 2
+              - generic [ref=e387]:
+                - generic [ref=e389]: Starter Level
+                - generic [ref=e390]:
+                  - generic [ref=e391]: EN
+                  - link "Add to calendar (ICS)" [ref=e392] [cursor=pointer]:
+                    - /url: /abapconf2026/ics/v7.ics
+                    - img [ref=e393]
+              - 'link "V7: ABAP Tool Strategy" [ref=e395] [cursor=pointer]':
+                - /url: /abapconf2026/sessions/v7
+                - 'heading "V7: ABAP Tool Strategy" [level=3] [ref=e398]'
+              - generic [ref=e399]:
+                - link "Thomas Ritter Thomas Ritter Speaker Profil →" [ref=e400] [cursor=pointer]:
+                  - /url: /abapconf2026/speaker/thomas-ritter
+                  - img "Thomas Ritter" [ref=e401]
+                  - generic [ref=e402]:
+                    - generic [ref=e403]: Thomas Ritter
+                    - generic [ref=e404]: Speaker Profil →
+                - link "Anne Keller Anne Keller Speaker Profil →" [ref=e405] [cursor=pointer]:
+                  - /url: /abapconf2026/speaker/anne-keller
+                  - img "Anne Keller" [ref=e406]
+                  - generic [ref=e407]:
+                    - generic [ref=e408]: Anne Keller
+                    - generic [ref=e409]: Speaker Profil →
+            - generic [ref=e412]:
+              - generic [ref=e413]: Track 3
+              - generic [ref=e414]:
+                - generic [ref=e416]: Advanced Level
+                - generic [ref=e418]: EN
+              - link "Onsite experience - SAP, Meet the Experts" [ref=e419] [cursor=pointer]:
+                - /url: /abapconf2026/sessions/v14
+                - heading "Onsite experience - SAP, Meet the Experts" [level=3] [ref=e422]
+          - generic [ref=e423]:
+            - generic [ref=e424]: 14:05
+            - generic [ref=e427]:
+              - generic [ref=e428]: Track 1
+              - generic [ref=e429]:
+                - generic [ref=e431]: Starter Level
+                - generic [ref=e432]:
+                  - generic [ref=e433]: EN
+                  - link "Add to calendar (ICS)" [ref=e434] [cursor=pointer]:
+                    - /url: /abapconf2026/ics/v3.ics
+                    - img [ref=e435]
+              - 'link "V3: AI-powered Full-Stack Development with SAP''s MCP servers for ABAP & SAP Fiori" [ref=e437] [cursor=pointer]':
+                - /url: /abapconf2026/sessions/v3
+                - 'heading "V3: AI-powered Full-Stack Development with SAP''s MCP servers for ABAP & SAP Fiori" [level=3] [ref=e440]'
+              - link "Christoph Gollmick Christoph Gollmick Speaker Profil →" [ref=e442] [cursor=pointer]:
+                - /url: /abapconf2026/speaker/christoph-gollmick
+                - img "Christoph Gollmick" [ref=e443]
+                - generic [ref=e444]:
+                  - generic [ref=e445]: Christoph Gollmick
+                  - generic [ref=e446]: Speaker Profil →
+            - generic [ref=e449]:
+              - generic [ref=e450]: Track 2
+              - generic [ref=e451]:
+                - generic [ref=e453]: Advanced Level
+                - generic [ref=e454]:
+                  - generic [ref=e455]: DE
+                  - link "Add to calendar (ICS)" [ref=e456] [cursor=pointer]:
+                    - /url: /abapconf2026/ics/v8.ics
+                    - img [ref=e457]
+              - 'link "V8: Visual Filters in Fiori Elements – Die Macht des CDS-Backends" [ref=e459] [cursor=pointer]':
+                - /url: /abapconf2026/sessions/v8
+                - 'heading "V8: Visual Filters in Fiori Elements – Die Macht des CDS-Backends" [level=3] [ref=e462]'
+              - link "Johann Fößleitner Johann Fößleitner Speaker Profil →" [ref=e464] [cursor=pointer]:
+                - /url: /abapconf2026/speaker/johann-foessleitner
+                - img "Johann Fößleitner" [ref=e465]
+                - generic [ref=e466]:
+                  - generic [ref=e467]: Johann Fößleitner
+                  - generic [ref=e468]: Speaker Profil →
+            - generic [ref=e471]:
+              - generic [ref=e472]: Track 3
+              - generic [ref=e473]:
+                - generic [ref=e475]: Advanced Level
+                - generic [ref=e477]: EN
+              - link "Onsite experience - SAP, Meet the Experts" [ref=e478] [cursor=pointer]:
+                - /url: /abapconf2026/sessions/v15
+                - heading "Onsite experience - SAP, Meet the Experts" [level=3] [ref=e481]
+          - generic [ref=e482]:
+            - generic [ref=e483]: 14:55
+            - generic [ref=e486]:
+              - generic [ref=e487]: Track 1
+              - generic [ref=e488]:
+                - generic [ref=e490]: Advanced Level
+                - generic [ref=e491]:
+                  - generic [ref=e492]: DE
+                  - link "Add to calendar (ICS)" [ref=e493] [cursor=pointer]:
+                    - /url: /abapconf2026/ics/v4.ics
+                    - img [ref=e494]
+              - 'link "V4: Implementierung moderner Integrationspatterns in ABAP" [ref=e496] [cursor=pointer]':
+                - /url: /abapconf2026/sessions/v4
+                - 'heading "V4: Implementierung moderner Integrationspatterns in ABAP" [level=3] [ref=e499]'
+              - generic [ref=e500]:
+                - link "Marc Heintz Marc Heintz Speaker Profil →" [ref=e501] [cursor=pointer]:
+                  - /url: /abapconf2026/speaker/marc-heintz
+                  - img "Marc Heintz" [ref=e502]
+                  - generic [ref=e503]:
+                    - generic [ref=e504]: Marc Heintz
+                    - generic [ref=e505]: Speaker Profil →
+                - link "Thomas Kaltbeitzel Thomas Kaltbeitzel Speaker Profil →" [ref=e506] [cursor=pointer]:
+                  - /url: /abapconf2026/speaker/thomas-kaltbeitzel
+                  - img "Thomas Kaltbeitzel" [ref=e507]
+                  - generic [ref=e508]:
+                    - generic [ref=e509]: Thomas Kaltbeitzel
+                    - generic [ref=e510]: Speaker Profil →
+            - generic [ref=e513]:
+              - generic [ref=e514]: Track 2
+              - generic [ref=e515]:
+                - generic [ref=e517]: Starter Level
+                - generic [ref=e518]:
+                  - generic [ref=e519]: EN
+                  - link "Add to calendar (ICS)" [ref=e520] [cursor=pointer]:
+                    - /url: /abapconf2026/ics/v9.ics
+                    - img [ref=e521]
+              - 'link "V9: Building Custom CDS Views with Unmanaged Queries in ABAP RAP – Leveraging IF_RAP_QUERY_PROVIDER for Full Data Control" [ref=e523] [cursor=pointer]':
+                - /url: /abapconf2026/sessions/v9
+                - 'heading "V9: Building Custom CDS Views with Unmanaged Queries in ABAP RAP – Leveraging IF_RAP_QUERY_PROVIDER for Full Data Control" [level=3] [ref=e526]'
+              - link "Mario Kernich Mario Kernich Speaker Profil →" [ref=e528] [cursor=pointer]:
+                - /url: /abapconf2026/speaker/mario-kernich
+                - img "Mario Kernich" [ref=e529]
+                - generic [ref=e530]:
+                  - generic [ref=e531]: Mario Kernich
+                  - generic [ref=e532]: Speaker Profil →
+            - generic [ref=e535]:
+              - generic [ref=e536]: Track 3
+              - generic [ref=e537]:
+                - generic [ref=e539]: Advanced Level
+                - generic [ref=e541]: EN
+              - link "Onsite experience - SAP, Conduct" [ref=e542] [cursor=pointer]:
+                - /url: /abapconf2026/sessions/v16
+                - heading "Onsite experience - SAP, Conduct" [level=3] [ref=e545]
+          - generic [ref=e546]:
+            - generic [ref=e547]: 15:40
+            - generic [ref=e549]:
+              - generic [ref=e550]: All Tracks
+              - generic [ref=e552]:
+                - generic [ref=e553]: EN
+                - link "Add to calendar (ICS)" [ref=e554] [cursor=pointer]:
+                  - /url: /abapconf2026/ics/coffee.ics
+                  - img [ref=e555]
+              - link "Coffee break" [ref=e557] [cursor=pointer]:
+                - /url: /abapconf2026/sessions/coffee
+                - heading "Coffee break" [level=3] [ref=e560]
+          - generic [ref=e561]:
+            - generic [ref=e562]: 16:15
+            - generic [ref=e565]:
+              - generic [ref=e566]: Track 1
+              - generic [ref=e567]:
+                - generic [ref=e569]: Lightning Talk
+                - generic [ref=e570]:
+                  - generic [ref=e571]: EN
+                  - link "Add to calendar (ICS)" [ref=e572] [cursor=pointer]:
+                    - /url: /abapconf2026/ics/v5.ics
+                    - img [ref=e573]
+              - 'link "V5: Back to ABAP: How Vibe Coding Brought a Lapsed Developer Back to Life" [ref=e575] [cursor=pointer]':
+                - /url: /abapconf2026/sessions/v5
+                - 'heading "V5: Back to ABAP: How Vibe Coding Brought a Lapsed Developer Back to Life" [level=3] [ref=e578]'
+              - link "Holger Bruchelt Holger Bruchelt Speaker Profil →" [ref=e580] [cursor=pointer]:
+                - /url: /abapconf2026/speaker/holger-bruchelt
+                - img "Holger Bruchelt" [ref=e581]
+                - generic [ref=e582]:
+                  - generic [ref=e583]: Holger Bruchelt
+                  - generic [ref=e584]: Speaker Profil →
+            - generic [ref=e587]:
+              - generic [ref=e588]: Track 2
+              - generic [ref=e589]:
+                - generic [ref=e591]: Advanced Level
+                - generic [ref=e592]:
+                  - generic [ref=e593]: EN
+                  - link "Add to calendar (ICS)" [ref=e594] [cursor=pointer]:
+                    - /url: /abapconf2026/ics/v10.ics
+                    - img [ref=e595]
+              - 'link "V10: Make SADL Search Actually Find Things, fixing Fiori Search for Real Users and the Return of SQL for Any(DB) even with HANA." [ref=e597] [cursor=pointer]':
+                - /url: /abapconf2026/sessions/v10
+                - 'heading "V10: Make SADL Search Actually Find Things, fixing Fiori Search for Real Users and the Return of SQL for Any(DB) even with HANA." [level=3] [ref=e600]'
+              - link "Stephan Heinberg Stephan Heinberg Speaker Profil →" [ref=e602] [cursor=pointer]:
+                - /url: /abapconf2026/speaker/stephan-heinberg
+                - img "Stephan Heinberg" [ref=e603]
+                - generic [ref=e604]:
+                  - generic [ref=e605]: Stephan Heinberg
+                  - generic [ref=e606]: Speaker Profil →
+            - generic [ref=e609]:
+              - generic [ref=e610]: Track 3
+              - generic [ref=e611]:
+                - generic [ref=e613]: Advanced Level
+                - generic [ref=e615]: EN
+              - link "Onsite experience - SAP, Meet the Experts" [ref=e616] [cursor=pointer]:
+                - /url: /abapconf2026/sessions/v17
+                - heading "Onsite experience - SAP, Meet the Experts" [level=3] [ref=e619]
+          - generic [ref=e620]:
+            - generic [ref=e621]: 17:05
+            - generic [ref=e623]:
+              - generic [ref=e624]: All Tracks
+              - generic [ref=e625]:
+                - generic [ref=e627]: Keynote
+                - generic [ref=e628]:
+                  - generic [ref=e629]: EN
+                  - link "Add to calendar (ICS)" [ref=e630] [cursor=pointer]:
+                    - /url: /abapconf2026/ics/key4.ics
+                    - img [ref=e631]
+              - 'link "Keynote: Karl Kessler" [ref=e633] [cursor=pointer]':
+                - /url: /abapconf2026/sessions/key4
+                - 'heading "Keynote: Karl Kessler" [level=3] [ref=e636]'
+              - link "Karl Kessler Karl Kessler Speaker Profil →" [ref=e638] [cursor=pointer]:
+                - /url: /abapconf2026/speaker/karl-kessler
+                - img "Karl Kessler" [ref=e639]
+                - generic [ref=e640]:
+                  - generic [ref=e641]: Karl Kessler
+                  - generic [ref=e642]: Speaker Profil →
+          - generic [ref=e643]:
+            - generic [ref=e644]: 17:30
+            - generic [ref=e646]:
+              - generic [ref=e647]: All Tracks
+              - generic [ref=e648]:
+                - generic [ref=e650]: Keynote
+                - generic [ref=e651]:
+                  - generic [ref=e652]: EN
+                  - link "Add to calendar (ICS)" [ref=e653] [cursor=pointer]:
+                    - /url: /abapconf2026/ics/key4.ics
+                    - img [ref=e654]
+              - link "Closing" [ref=e656] [cursor=pointer]:
+                - /url: /abapconf2026/sessions/key4
+                - heading "Closing" [level=3] [ref=e659]
+              - generic [ref=e660]:
+                - link "Tobias Hofmann Tobias Hofmann Speaker Profil →" [ref=e661] [cursor=pointer]:
+                  - /url: /abapconf2026/speaker/tobias-hofmann
+                  - img "Tobias Hofmann" [ref=e662]
+                  - generic [ref=e663]:
+                    - generic [ref=e664]: Tobias Hofmann
+                    - generic [ref=e665]: Speaker Profil →
+                - link "Sören Schlegel Sören Schlegel Speaker Profil →" [ref=e666] [cursor=pointer]:
+                  - /url: /abapconf2026/speaker/soeren-schlegel
+                  - img "Sören Schlegel" [ref=e667]
+                  - generic [ref=e668]:
+                    - generic [ref=e669]: Sören Schlegel
+                    - generic [ref=e670]: Speaker Profil →
+                - link "Johann Fößleitner Johann Fößleitner Speaker Profil →" [ref=e671] [cursor=pointer]:
+                  - /url: /abapconf2026/speaker/johann-foessleitner
+                  - img "Johann Fößleitner" [ref=e672]
+                  - generic [ref=e673]:
+                    - generic [ref=e674]: Johann Fößleitner
+                    - generic [ref=e675]: Speaker Profil →
+                - link "Domi Bigl Domi Bigl Speaker Profil →" [ref=e676] [cursor=pointer]:
+                  - /url: /abapconf2026/speaker/domi-bigl
+                  - img "Domi Bigl" [ref=e677]
+                  - generic [ref=e678]:
+                    - generic [ref=e679]: Domi Bigl
+                    - generic [ref=e680]: Speaker Profil →
+          - generic [ref=e681]:
+            - generic [ref=e682]: 17:40
+            - generic [ref=e684]:
+              - generic [ref=e685]: All Tracks
+              - generic [ref=e687]:
+                - generic [ref=e688]: EN
+                - link "Add to calendar (ICS)" [ref=e689] [cursor=pointer]:
+                  - /url: /abapconf2026/ics/evening.ics
+                  - img [ref=e690]
+              - link "Evening event" [ref=e692] [cursor=pointer]:
+                - /url: /abapconf2026/sessions/evening
+                - heading "Evening event" [level=3] [ref=e695]
+    - region [ref=e696]:
+      - generic [ref=e697]:
+        - 'heading "Mannheim: Exclusive Highlights" [level=1] [ref=e698]'
+        - paragraph [ref=e699]: Participants in Mannheim have the additional option to participate in onsite exclusive sessions. These sessions are offered by SAP and our sponsors.
+      - generic [ref=e700]:
+        - article [ref=e701]:
+          - generic [ref=e702]:
+            - img "Demo Pods teaser picture" [ref=e705]
+            - generic [ref=e706]:
+              - heading "Demo Pods" [level=3] [ref=e707]
+              - paragraph [ref=e709]: "Live demos and hands-on system access. Right from the labs: get your hands dirty and explore the latest features."
+        - article [ref=e711]:
+          - generic [ref=e712]:
+            - img "Influence session teaser picture" [ref=e715]
+            - generic [ref=e716]:
+              - heading "Expert Talks" [level=3] [ref=e717]
+              - paragraph [ref=e719]: Experts share the idea behind the product. Learn directly from the minds behind a product, get insights and learn get to ask your questions.
+        - article [ref=e721]:
+          - generic [ref=e722]:
+            - img "Influence session teaser picture" [ref=e725]
+            - generic [ref=e726]:
+              - heading "Influence Sessions" [level=3] [ref=e727]
+              - paragraph [ref=e729]: Experts from SAP are eager to get your feedback. Share what you are missing or what could be improved, directly with the people responsible at SAP.
+        - article [ref=e731]:
+          - generic [ref=e732]:
+            - img "Meet the experts session teaser picture" [ref=e735]
+            - generic [ref=e736]:
+              - heading "Meet the Experts" [level=3] [ref=e737]
+              - paragraph [ref=e739]: "Get to know experts from the SAP universe. The experts are onsite in Mannheim: from SAP, customers and partners. Exchange your ideas and make connections that last."
+    - region "Spendenaktion – Deutsche Krebshilfe" [ref=e741]:
+      - generic [ref=e742]:
+        - generic [ref=e743]:
+          - heading "Code Schreiben. Leben Retten." [level=2] [ref=e744]
+          - paragraph [ref=e745]: Unsere Spendenaktion zur ABAPConf 2026.
+        - generic [ref=e746]:
+          - link "Spendenlink öffnen":
+            - /url: https://www.krebshilfe.de/
+            - img "Banner der Deutschen Krebshilfe"
+          - generic [ref=e747]:
+            - generic [ref=e748]:
+              - paragraph [ref=e749]: Scanne den QR-Code und unterstütze die Deutsche Krebshilfe mit deiner Spende. Unsere Aktion läuft bis zum 30. Juni mit dem Spendenziel von 500€.
+              - paragraph [ref=e750]: Spenden sind schon ab 5€ möglich.
+            - link "Spendenlink öffnen" [ref=e751] [cursor=pointer]:
+              - /url: https://www.krebshilfe.de/spenden-aktiv-werden/aktiv-werden/online-spendenaktion-starten/spendenaktion/code-schreiben-leben-retten/
+              - generic [ref=e752]:
+                - img [ref=e753]
+                - generic [ref=e755]: Unsere Spendenaktion
+          - link "Spendenlink öffnen" [ref=e756] [cursor=pointer]:
+            - /url: https://www.krebshilfe.de/spenden-aktiv-werden/aktiv-werden/online-spendenaktion-starten/spendenaktion/code-schreiben-leben-retten/
+            - img "QR-Code zur Spendenaktion" [ref=e757]
+        - paragraph [ref=e759]: Scanne den QR-Code und unterstütze die Deutsche Krebshilfe mit deiner Spende.
+    - generic [ref=e760]:
+      - heading "Event organization" [level=2] [ref=e761]
+      - paragraph [ref=e762]: Meet the organization team that is not only organizing ABAPConf, but also taking care of curating the agenda and session content. We are supported by the ABAP team of SAP SE
+      - generic [ref=e763]:
+        - generic [ref=e764]:
+          - img "Tobias Hofmann" [ref=e765]
+          - generic [ref=e766]:
+            - generic [ref=e767]: Tobias Hofmann
+            - generic [ref=e768]: Conitas GmbH
+        - generic [ref=e769]:
+          - img "Sören Schlegel" [ref=e770]
+          - generic [ref=e771]:
+            - generic [ref=e772]: Sören Schlegel
+            - generic [ref=e773]: Brandeis Consulting GmbH
+        - generic [ref=e774]:
+          - img "Domi Bigl" [ref=e775]
+          - generic [ref=e776]:
+            - generic [ref=e777]: Domi Bigl
+            - generic [ref=e778]: Cadaxo GmbH
+        - generic [ref=e779]:
+          - img "Johann Fößleitner" [ref=e780]
+          - generic [ref=e781]:
+            - generic [ref=e782]: Johann Fößleitner
+            - generic [ref=e783]: Cadaxo GmbH
+        - generic [ref=e784]:
+          - img "Jörg Brandeis" [ref=e785]
+          - generic [ref=e786]:
+            - generic [ref=e787]: Jörg Brandeis
+            - generic [ref=e788]: Brandeis Consulting GmbH
+    - generic [ref=e789]:
+      - heading "FAQ" [level=2] [ref=e790]
+      - generic [ref=e791]:
+        - heading "What is ABAPConf?" [level=2] [ref=e792] [cursor=pointer]
+        - heading "How do I join the conference?" [level=2] [ref=e793] [cursor=pointer]
+        - heading "Are there early bird tickets available?" [level=2] [ref=e794] [cursor=pointer]
+        - heading "Does ABAPConf charge a fee?" [level=2] [ref=e795] [cursor=pointer]
+        - heading "What about Watch Parties?" [level=2] [ref=e796] [cursor=pointer]
+        - heading "Is this only for Europe?" [level=2] [ref=e797] [cursor=pointer]
+        - heading "Will the sessions be recorded?" [level=2] [ref=e798] [cursor=pointer]
+        - heading "Will there be sessions in English?" [level=2] [ref=e799] [cursor=pointer]
+        - heading "Can my company sponsor the event?" [level=2] [ref=e800] [cursor=pointer]
+        - heading "Do you have a code of conduct?" [level=2] [ref=e801] [cursor=pointer]
+        - heading "Is this an SAP event?" [level=2] [ref=e802] [cursor=pointer]
+  - contentinfo [ref=e803]:
+    - generic [ref=e804]:
+      - generic [ref=e805]:
+        - img "ABAPConf Logo" [ref=e806]
+        - paragraph [ref=e807]: ABAPConf. The ABAP conference by developers, for developers.
+        - paragraph [ref=e808]: Free | live | hybrid
+        - link "> Code of Conduct" [ref=e809] [cursor=pointer]:
+          - /url: https://abapconf.org/abapconf2023/#/coc
+        - link "> ABAPConf Legends" [ref=e810] [cursor=pointer]:
+          - /url: https://abapconf.org/legends/
+      - generic [ref=e811]:
+        - heading "Legal" [level=4] [ref=e812]
+        - link "> Impressum" [ref=e814] [cursor=pointer]:
+          - /url: https://abapconf.org/abapconf2023/#/impressum
+        - link "> Datenschutzerklärung (GitHub Pages)" [ref=e815] [cursor=pointer]:
+          - /url: https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement
+      - generic [ref=e816]:
+        - heading "ABAPConf Archiv" [level=4] [ref=e817]
+        - link "> ABAPConf 2021" [ref=e819] [cursor=pointer]:
+          - /url: /abapconf2021
+        - link "> ABAPConf 2022" [ref=e820] [cursor=pointer]:
+          - /url: /abapconf2022
+        - link "> ABAPConf 2023" [ref=e821] [cursor=pointer]:
+          - /url: /abapconf2023
+        - link "> ABAPConf Europe 2024" [ref=e822] [cursor=pointer]:
+          - /url: /abapconfeurope2024
+        - link "> ABAPConf South Africa 2024" [ref=e823] [cursor=pointer]:
+          - /url: ""
+        - link "> ABAPConf 2024" [ref=e824] [cursor=pointer]:
+          - /url: /abapconf2024
+        - link "> ABAPConf 2025" [ref=e825] [cursor=pointer]:
+          - /url: /abapconf2025
+      - generic [ref=e826]:
+        - heading "Contact us" [level=4] [ref=e827]
+        - paragraph [ref=e829]: "Email: abapconf (at) gmail.com"
+        - generic [ref=e830]:
+          - link "ABAPConf website" [ref=e831] [cursor=pointer]:
+            - /url: https://www.abapconf.org
+            - generic [ref=e832]: ABAPConf website
+            - img [ref=e833]
+          - link "Instagram" [ref=e835] [cursor=pointer]:
+            - /url: https://www.instagram.com/abapconf/
+            - generic [ref=e836]: Instagram
+            - img [ref=e837]
+          - link "X (Twitter)" [ref=e841] [cursor=pointer]:
+            - /url: https://x.com/AbapConf
+            - generic [ref=e842]: Twitter
+            - img [ref=e843]
+```
+
+# Test source
+
+```ts
+  1  | import { test, expect } from '@playwright/test';
+  2  | 
+  3  | test('homepage - hero', async ({ page }) => {
+  4  |   await page.goto('/abapconf2026');
+  5  |   await expect(page).toHaveScreenshot();
+  6  | 
+  7  | });
+  8  | 
+  9  | test('homepage - full page', async ({ page }) => {
+  10 |   await page.goto('/abapconf2026');
+  11 |   test.setTimeout(10000);
+  12 |   await expect(page.getByRole('link', { name: 'Sponsor softway' })).toBeVisible();
+  13 |   await expect(page.getByRole('link', { name: 'Sponsor rev-trac' })).toBeVisible();
+  14 |   await expect(page.getByRole('link', { name: 'Sponsor Brandeis GmbH' })).toBeVisible();
+  15 |   await expect(page.getByRole('img', { name: 'MAFINEX skyline' })).toBeVisible();
+  16 |   await expect(page).toHaveScreenshot({fullPage: true, timeout: 10000});
+  17 | 
+  18 | });
+  19 | 
+  20 | test('homepage - tickets', async ({ page }) => {
+  21 |   await page.goto('/abapconf2026/#registration');
+  22 |   await page.locator("#registration").scrollIntoViewIfNeeded();
+> 23 |   await expect(page).toHaveScreenshot();
+     |                      ^ Error: expect(page).toHaveScreenshot(expected) failed
+  24 | });
+  25 | 
+  26 | test('homepage - tickets - hover', async ({ page }) => {
+  27 |   await page.goto('/abapconf2026/#registration');
+  28 |   await expect(page.getByRole('link', { name: 'ABAPConf 2026 Online Edition' })).toBeVisible();
+  29 |   await page.locator("#registration").scrollIntoViewIfNeeded();
+  30 |   await page.getByRole('link', { name: 'ABAPConf 2026 Online Edition' }).hover();
+  31 |   await expect(page).toHaveScreenshot();
+  32 | });
+  33 | 
+  34 | 
+  35 | test('homepage - tickets mannheim - hover', async ({ page }) => {
+  36 |   await page.goto('/abapconf2026/#registration');
+  37 |   await expect(page.getByRole('link', { name: 'ABAPConf 2026 Mannheim' })).toBeVisible();
+  38 |   await page.locator("#registration").scrollIntoViewIfNeeded();
+  39 |   await page.getByRole('link', { name: 'ABAPConf 2026 Mannheim' }).hover();
+  40 |   await expect(page).toHaveScreenshot();
+  41 | });
+  42 | 
+  43 | test('homepage - streaming', async ({ page }) => {
+  44 |   await page.goto('/abapconf2026/#streaming');
+  45 |   await expect(page).toHaveScreenshot();
+  46 | });
+```
