@@ -1,6 +1,9 @@
 name: Update Playwright Screenshots
-on: 
-  workflow_dispatch:
+on:
+  push:
+    branches: [ update-snapshots ]
+  pull_request:
+    branches: [ update-snapshots ]
 jobs:
   test:
     timeout-minutes: 60
